@@ -1,38 +1,64 @@
+:root {
+  --branding-primary: #0ce8aa;
+  --branding-secondary: #0D7EFF;
+  --branding-tertiary: #0CADE8;
+  --branding-quaternary: #0DFF76;
+
+  --branding-primary-dark: #1F1F1F;
+  --branding-secondary-dark: #404040;
+  --branding-tertiary-dark: #7F7F7F;
+}
+
+body
+{
+  background-color: var(--branding-secondary-dark);
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: var(--branding-primary);  
+  padding: 20px;
+  color: var(--branding-primary-dark);
+}
+
+.search-container {
+  margin-top: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px; /* Adjust the width as needed */
+}
+
+
+.search-button {
+  padding: 10px 20px;
+  background-color: var(--branding-secondary);
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.search-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error-message a {
+  color: black;
+  font-weight: normal;
+  text-decoration: underline;
 }
